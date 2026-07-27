@@ -1,0 +1,189 @@
+[book]
+authors = ["Amane Fujimiya, Founder"]
+language = "en"
+src = "src"
+title = "RHINELAB Maintenance and Operation"
+
+[build]
+build-dir = "public"
+
+# ==============================================================================
+# ORIGINAL & WIKI CORE PREPROCESSORS
+# ==============================================================================
+
+[preprocessor.bib]
+bibliography = "references.bib"
+render-bib = "cited"
+title = "References"
+
+[preprocessor.image-size]
+command = "mdbook-image-size"
+
+[preprocessor.numthm]
+
+[preprocessor.wikilink]
+
+[preprocessor.metadata]
+valid-tags = ["title", "author", "keywords", "released"]
+default-author = "Fujimiya Amane"
+continue-on-error = true
+
+# ==============================================================================
+# 1. VISUAL STYLING, CALLOUTS & LAYOUT AESTHETICS
+# ==============================================================================
+
+[preprocessor.admonish]
+#command = "mdbook-admonish"
+#on_failure = "bail"
+assets_version = "3.1.0" # do not edit: managed by `mdbook-admonish install`
+
+[preprocessor.tabs]
+
+[preprocessor.pagetoc]
+
+[preprocessor.toc]
+marker = "<!-- toc -->"
+max-level = 3
+
+[preprocessor.presentation-preprocessor]
+
+#[preprocessor.collapsible-code-blocks]
+#default-open = false
+
+# ==============================================================================
+# 2. WIKI ARCHITECTURE & KNOWLEDGE MANAGEMENT
+# ==============================================================================
+
+[preprocessor.content-collections]
+renderers = ["html"]
+
+[preprocessor.glossary]
+paths = "GLOSSARY.md"
+
+#[preprocessor.abbr]
+
+[preprocessor.index]
+
+[preprocessor.gitinfo]
+date-format = "%Y-%m-%d %H:%M UTC"
+
+#[preprocessor.anchors-aweigh]
+
+[preprocessor.rss-feed]
+title = "RHINELAB Maintenance Wiki Changelog"
+site_url = "https://wiki.rhinelaboratory.org"
+
+# ==============================================================================
+# 3. DIAGRAMS, SCHEMATICS & VISUAL MODELING
+# ==============================================================================
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.plantuml]
+plantuml-cmd = "plantuml"
+
+[preprocessor.d2]
+layout = "dagre"
+theme = 0
+
+[preprocessor.graphviz]
+output-format = "svg"
+
+[preprocessor.kroki]
+endpoint = "https://kroki.io"
+
+[preprocessor.railroad]
+command = "mdbook-railroad"
+
+[preprocessor.rustviz]
+
+# ==============================================================================
+# 4. MATHEMATICS, PHYSICS & SCIENTIFIC NOTATION
+# ==============================================================================
+
+[preprocessor.katex]
+pre-render = true
+
+[preprocessor.mathjax]
+
+[preprocessor.typst-math]
+
+# ==============================================================================
+# 5. CODE INTEGRATION & AST HIGHLIGHTING
+# ==============================================================================
+
+[preprocessor.include-rs]
+base-dir = "examples"
+
+[preprocessor.treesitter]
+languages = ["wgsl", "elixir"]
+
+[preprocessor.inline-highlighting]
+
+#[preprocessor.files]
+
+# ==============================================================================
+# 6. INTERACTIVE EVALUATION & TRAINING WIDGETS
+# ==============================================================================
+
+[preprocessor.quiz]
+
+[preprocessor.cmdrun]
+
+[preprocessor.lang]
+
+[preprocessor.exercises]
+manage_assets = true
+
+# ==============================================================================
+# 7. TEMPLATING, LOGIC & DATA INJECTION
+# ==============================================================================
+
+[preprocessor.variables]
+use_env = true
+
+[preprocessor.variables.variables]
+app_version = "1.0.0"
+organization = "RHINELAB"
+
+[preprocessor.minijinja]
+
+[preprocessor.shiftinclude]
+
+[preprocessor.embed]
+
+# ==============================================================================
+# 8. TRANSLATION, INFRASTRUCTURE & QA UTILITIES
+# ==============================================================================
+
+[preprocessor.i18n-helpers]
+renderer = ["html"]
+
+#[preprocessor.open-on-gh]
+#repository = "rhinelab/maintenance-ops"
+#branch = "main"
+
+# ==============================================================================
+# HTML & OUTPUT RENDERER CONFIGURATION
+# ==============================================================================
+
+[output.html]
+mathjax-support = true
+additional-css = [
+    "mdbook-admonish.css",
+    "theme/pagetoc.css", "./mdbook-admonish.css",
+#    "theme/catppuccin.css",
+#    "theme/catppuccin-admonish.css"
+]
+#additional-js = [
+#    "theme/pagetoc.js"
+#]
+
+[output.html.fold]
+enable = true
+level = 0
+
+[output.linkcheck]
+follow-web-links = false
+warning-policy = "error"

@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "author": null,
+      "collection": null,
+      "date": "2026-07-27T16:54:18.683061300+00:00",
+      "description": null,
+      "draft": false,
+      "path": "GLOSSARY.md",
+      "preview_html": "",
+      "tags": [],
+      "title": "GLOSSARY"
+    },
+    {
+      "author": null,
+      "collection": null,
+      "date": "2026-07-27T15:17:45.336148+00:00",
+      "description": null,
+      "draft": false,
+      "path": "chapter1_laboratory_function\\chapter_1.md",
+      "preview_html": "",
+      "tags": [],
+      "title": "chapter_1"
+    },
+    {
+      "author": null,
+      "collection": null,
+      "date": "2026-07-27T15:16:05.174067+00:00",
+      "description": null,
+      "draft": false,
+      "path": "introduction.md",
+      "preview_html": "",
+      "tags": [],
+      "title": "introduction"
+    }
+  ]
+}
