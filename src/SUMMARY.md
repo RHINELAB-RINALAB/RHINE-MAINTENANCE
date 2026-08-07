@@ -1,10 +1,11 @@
 # Summary
 
-[Introduction to RHINELAB](introduction.md)
+- [Introduction](./introduction.md)
+- [Projects and Research Agenda](./chapter1_laboratory_function/chapter_1.md)
 
-# Structures of RHINELAB
+# Laboratory structures
 
-- [Structures and Compositions](chapter1_laboratory_function/chapter_1.md)
+- [Structural compositions](part1_laboratory_function/chapter_1.md)
+- [Personnel and laboratory members](part1_laboratory_function/chapter_2.md)
 
-# Detailed laboratory specification
 

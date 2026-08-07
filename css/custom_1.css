@@ -1,0 +1,47 @@
+/* theme/custom.css */
+
+/* 1. Make the table an isolated scroll container */
+.content main table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+}
+
+/* 2. Default cell rules: enforce vertical wrapping within bounds */
+.content main table th,
+.content main table td {
+    /* Allow text to wrap vertically inside cells */
+    white-space: normal;
+    
+    /* Prevent unbroken strings or long code blocks from clipping */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    
+    /* Set minimum readable width and maximum horizontal stretch per column */
+    min-width: 120px;
+    max-width: 32ch; /* Caps horizontal expansion to ~32 character widths */
+    
+    padding: 8px 12px;
+    vertical-align: top;
+}
+
+/* 3. Special handling for wide tables (5+ columns) using CSS :has() */
+.content main table:has(th:nth-child(5)),
+.content main table:has(td:nth-child(5)) {
+    /* Ensures the table renders to its total content width when column counts are high,
+       forcing smooth horizontal scrolling rather than squishing columns */
+    width: max-content;
+}
+
+.content main table:has(th:nth-child(5)) th,
+.content main table:has(th:nth-child(5)) td {
+    /* Tighter horizontal limit per column when 5+ columns are detected */
+    min-width: 130px;
+    max-width: 25ch;
+}
+
+:root {
+    --content-max-width: 1000px;
+}
