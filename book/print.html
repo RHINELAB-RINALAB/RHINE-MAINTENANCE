@@ -1,0 +1,550 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>RHINELAB Maintenance Wiki</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/custom_1-8dc4c179.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-88f0254d.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-8664a1bb.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">RHINELAB Maintenance Wiki</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="introduction-to-rhinelab"><a class="header" href="#introduction-to-rhinelab">Introduction to RHINELAB</a></h1>
+<p>Here rests the precursor pages, of the <strong>RHINELAB-RINALAB laboratory maintenance documentation</strong>, so customarily so, a welcome is said to be needed.</p>
+<p>Welcome to the main page. I am <strong>Bui Gia Khanh</strong>, often called ‘Amane’ by many people, and is the <strong>founder and principal investigator</strong> (director and researcher) of this small laboratory. There, in my fondness of people, be sure it would be very much helpful, planned of which the sort there be, toward members of the laboratory itself in the future, in present, in the past, for which if there are, as both a <em>model</em> of operation, and also a <em>central piece</em> of studies, information configuration, and bulletin for your guidances inside the laboratory. Thus, this place here works and function for this entire website, as the fundamental <em>repository</em> of which we will configure most of the expected contents, and functionalities of this site.</p>
+<p>If you would rather not share all my grievance, and want quick information, you can see the laboratory structure as the particular inquiry section, UNIG for different laboratories in existence of RHINELAB, and the <em>philosophical introduction</em> for the most introduction to the content specified thereof for the philosophy section. For the surface contact information and so on, you can see them in <a href="https://rhinelab.netlify.app/">the frontmatter website</a>, or the more technical <a href="https://rhinelab-rinalab.github.io/">back-end or so website</a>.</p>
+<h2 id="function"><a class="header" href="#function">Function</a></h2>
+<p>As such place you are standing right now, belongs to the <strong>maintenance category</strong>, the maintenance system here represents the <em>minimal denominator</em> one can get away with, from science or so, within respect of particularity. Thus, here lies the main, minimal and formal documentation of the laboratory functions, and the laboratory organization, either as a fallback, or as standard default in all.</p>
+<h3 id="intended-functional-contents"><a class="header" href="#intended-functional-contents">Intended functional contents</a></h3>
+<p>The following are what we are intending this site to hold, in the future or so regardless.</p>
+<ol>
+<li>Foundational resources of the laboratory.</li>
+<li>Logistical denotation and summary of all logistics of the lab.</li>
+<li>Artefacts and working system.</li>
+<li>Updating on working systems.</li>
+<li>Assignments, directives and working/research/foundational documentation/buildup.</li>
+<li>Programme and intellectual/specific research events.</li>
+<li>Manifesto and subsequent core laboratory <strong>principles</strong> and designs, how the laboratory works, what is the organization.</li>
+<li>General <strong>stateful organization</strong> of the laboratory.</li>
+<li>Member pages.</li>
+<li>Works and publications, poster and showcases.</li>
+<li>Scheduling. Pending works, modification and preview.</li>
+<li>Collaborations and so on.</li>
+<li>Documentation of <strong>core functionalities and technologies</strong> of the lab, like <code>git</code> or <code>quarto</code> or even something as simple as <code>markdown</code>. Including how to work with <code>latex</code> or <code>typst</code> and other documenting system.</li>
+</ol>
+<h2 id="the-long-introduction-to-rhinelab"><a class="header" href="#the-long-introduction-to-rhinelab">The long introduction to RHINELAB</a></h2>
+<p>In case you haven’t read from the <a href="https://rhinelab.netlify.app/">front-facing website or so</a>, RHINELAB is a <em>theoretical research laboratory</em> with the side prospect being a semi-experimental laboratory, under budget, and under constraint if there are any. In doing so, we are committed to the act that most of the time, would be abhorrently dismissed by the general academic society or so, during which times we are doing STEM research. Picking a philosophical commitment, but <strong>stand</strong> in between. That is, we want to perfect the art of <strong>tension</strong><sup class="footnote-reference" id="fr-1-1"><a href="#footnote-1">1</a></sup> to our best of ability. Our core belief stems from the reality of such, that there exists no fundamentally right model, and there exists no fundamentally wrong model in hindsight. Only there exists miscategorized, misused, misconfigured, and overall just the plain wrong usage there is. In doing so, that is the foundation and one of the core belief, that shaped RHINELAB to what it is, and the philosophies it carries with downstream effect.</p>
+<p>In this website, you will find it as the central hub of operation of the entire lab, written down here, of organization, of whatever listed above in the functionalities, and of which is the living space, though detached from its many details, to coordinate different people together, and different worlds together at once. That means, basically, is that while it is a laboratory, our laboratory works and functions kind of, or rather particularly so, similar to how a fundamental institution operates, just without the money, and perhaps without the rhetoric often seen of institutional gravity thereof. We have, for example, <strong>RHINE@MAPR</strong>, the Mathematics and Physics Research Laboratory, and <strong>RHINE@MTAIL</strong>, the Modelling Theory and Theoretical Artificial Intelligence and Learning Theoretic Research Laboratory, which is perhaps <em>very pointed</em> of its intention and purpose.</p>
+<p>Overtime, more information will be added, so please apologize if there are any missing packages, or so, of details inside this particular repository thereof. Because of the rate on operation, there will also be fairly lots of modification to be, as well as laboratory <strong>member introduction</strong>, for example, which will be shifted overtime. We then suggest you to <em>take the main general link</em>, should you wish instead, and move them instead of internal link inside this page. Contact information and so on will also be provided, and if you wish to inquire further, we are happy to present ample about of connections for you to dial in.</p>
+<blockquote class="blockquote-tag blockquote-tag-note">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p>
+<p>As of now, under such inquiry thereof the organization and main functional groups under strain of institutional insufficiency of scholars, the organization thereby activated or concentrated, are <strong>RHINE@TAAI</strong> (Theoretical and Applied Artificial Intelligence), <strong>RHINE@MAPR</strong> (Mathematics and Physis Research), <strong>RHINE@LOGIT</strong> (Logistical Infrastructure and Architecture), and <strong>RHINE@MTAIL</strong> (Modelling Theory and Artificial Intelligence, Learning-theoretic) functionals.</p>
+</blockquote>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1">
+<p>Tension here refers briefly to, the incollapsibility of argument. Because most of our philosophies are to be <em>effective theory philosophy</em>, that is, there exists no universal theory of the current date, only many attempts and none should hold that ontology as being unquestioned. That is the stance we are putting, so is to also invest in unproven theory under clear enough justification thereof. <a href="#fr-1-1">↩</a></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="functional-form-and-research"><a class="header" href="#functional-form-and-research">Functional form and research</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="chapter-1---structure-and-composition-of-rhinelab"><a class="header" href="#chapter-1---structure-and-composition-of-rhinelab">Chapter 1 - Structure and composition of RHINELAB</a></h1>
+<p>We have quite plentiful of people in the laboratory, hence there exists the need to provide a ledger of everyone, and any particular alumni, so to speak, past researcher, and collaborators of the laboratory and institution thereof, both present and future.</p>
+<h2 id="a-planning-of-operational-echelon"><a class="header" href="#a-planning-of-operational-echelon">A. Planning of operational echelon</a></h2>
+<p>Scheduling on echelon formation of members for RHINELAB is and would be of the latter sections. The reason for this clarification is as natural as for any working and operating organization of sort, to note that the system is minimal by default, with maybe, perhaps, many role specifications, but a relatively flat hierarchy. While to work under this model we require certain form of hierarchy to delegate, manage and inquire, such logistical constraints and formalism should be gauged and settled under minimality to prevent unnecessary bloat that would, be of superficiality rather than actual function of requirement at present date. We can separate the hierarchy into two parts, either the <em>Upper Echelon</em> of system, then the <em>Lower Echelon</em> for core members and core specialization. However, their roles, or rather their introduction to the laboratory, is most often considered to be <strong>Tier</strong>, with <strong>Tier One</strong> and <strong>Tier Two</strong> separately for each echelon.</p>
+<blockquote class="blockquote-tag blockquote-tag-tip">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
+<p>We use the same word ‘Tier’ for also the <strong>scope and exercise of power</strong> constraints. Note that those are marked with the statutory tier in Roman numbering, i.e. Tier I, Tier IV and so on.</p>
+</blockquote>
+<p>Within this system, we expect the following as the minimal digression one can take a glance into, to show and analyze who and what a person inside RHINELAB this particular specimen can be. For example,</p>
+<table>
+  
+<thead>
+    
+<tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Subtitle</th>
+      <th>Descriptions</th>
+      <th>Functional information</th>
+      <th>Academic Roles</th>
+      <th>Scholastic Roles</th>
+      <th>Concentration, Domain, Department, Unit</th>
+      <th>Further Note</th>
+    </tr>
+
+  </thead>
+
+  
+<tbody>
+    
+<tr>
+      <td>Bui Gia Khanh</td>
+      <td>PRD</td>
+      <td>DR, DSC, DRC</td>
+      <td>Founder of RHINELAB and one of the most active members, as well as architect of many of its projects.</td>
+      <td>Like country or something, idk.</td>
+      <td>Research Leader</td>
+      <td>SMS</td>
+      <td>RHINELAB@CAD, RHINELAB@UNIG-01 (MTAIL), RHINELAB@MAPR, RHINELAB@TAAI, RHINELAB@PHILS, RHINELAB@BIO</td>
+      <td>None, if there is even some.</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+<p>This will give at most, all details about such person in general. And from there, we are to explain and analyze what each of those mean, and the underlying abbreviation and resolution that is compressed behind them.</p>
+<h3 id="rhinelab---tier-one-members"><a class="header" href="#rhinelab---tier-one-members">RHINELAB - Tier One Members</a></h3>
+<p>Internally of RHINELAB, we have the following organization of personnel at the top level, that is, the <em>directorship system</em> and leadership teams. Insofar, the system itself is provisional, as the system of directorship itself be particularity thereof, with its share of many problems and fallacy.</p>
+<p>Within such, we would like to separate the hierarchy into two parts - the <em>directors</em>, and the <em>principle director</em>, or founder of RHINELAB. Both of them have their places inside the arguably small and compressed system, that would be composing of at least <strong>two tiers</strong> of active directorship - both to ensure direct exposure and not stringent line of control and bureaucratic bloat, but also to separate works evenly, or at least in the attempt of doing so there are.</p>
+<table>
+  
+<thead>
+    
+<tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Priority</th>
+      <th>Structural Ordering</th>
+    </tr>
+
+  </thead>
+
+  
+<tbody>
+    
+<tr>
+      <td><strong>Principle Director</strong> (PRD, also called Laboratory Leader)</td>
+      <td>Head of the laboratory and institution a whole, and the absolute apex of operation. Held by the founder of RHINELAB. Is not allowed to resign. Currently held by <strong>Bui Gia Khanh</strong>.</td>
+      <td><code>R0</code> to all band of spectrum, if desired.</td>
+      <td>Tier I. All decisions on the wider scheme of the laboratory, its operation on the macroscale typically, and microscale under concentrated effort and so on must be approved by the Principle Director.</td>
+    </tr>
+
+    
+<tr>
+      <td><strong>Director</strong> (DR)</td>
+      <td>This is the role for <em>specialists</em> and often, <em>important scholar of stable and sizable</em> responsibility or qualification. Inside the laboratory, they can be seen as both sizable and good scholar, as well as with organizational, institutional and specific tangential responsibilities toward the culmination and improvement of the laboratory.</td>
+      <td><code>R1</code> to <code>R3</code>.</td>
+      <td>Inherently, all Tier II. All decision of this tier would be specified down below.</td>
+    </tr>
+
+    
+<tr>
+      <td><strong>Full Members</strong> (FM)</td>
+      <td>This is the baseline, full and important member of the laboratory. Every person of the laboratory will have, upon the 25-people pool assignment, will be assigned this role, <em>permanently</em>.</td>
+      <td><code>R2</code> to <code>R3</code>.</td>
+      <td>Fixed on Tier III for operations.</td>
+    </tr>
+
+    
+<tr>
+      <td><strong>Half Members</strong> (HM)</td>
+      <td>Half member is the analogue for <em>trainee</em> or <em>trial participant</em> of the lab's inner circle of sort. There will be inherent <strong>limitation</strong> on what half members can access, based on virtue of trust and accountability. Though it is not as if we are essentially locking them out, we are to build trust with them, and gain their respect (speaking from full member's perspective and the directorship), then we would be entitled to give them access and elevation to full member. It is also expected for the half-member to do the same, if they feel their commitment is <em>worthwhile of consideration</em>. Given such, we are to limit this as the core central separation from full member, with limited power, limited accessibility, and limited leverage.</td>
+      <td><code>R4</code>.</td>
+      <td>Structural ordering dictates Half Member to be of the lower Tier IV.</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+<p>Roles of which are active would be marked with the tag <code>(A)</code>, and <code>(P)</code> for passive, meaning nominally and not-active duty roles, more so observer at that level. Under the directorship system, we can separate it into different archetypes of roles. This is to rather pay respect to each person’s archetype and essential preference, for some wanting to handle administrative roles or research on those specifically, or those that would be in charge or of contribution that makes them tangible to diplomats - in such case there will reserve a role in which to gain them more focus and concentration toward that area alone.</p>
+<p>That said, we are also to note the responsibility of the directors. Or rather, the philosophy that the director should pay toward and respect for the members they are managing, and also preparing. While a house without its owner and director is worth not much of the pig cage, a prison is not healthier than what to be of anarchy. So far, our philosophy if <em>balancing</em>, in which we lean onto no side yet to acknowledge the leaning of possibility.</p>
+<h3 id="directorship-variations"><a class="header" href="#directorship-variations">Directorship Variations</a></h3>
+<p>With that in hand, we return our attention to the next identification. Director is not homogeneous. There are, as far as we can consider, many types of director. We will list categories of them here, so free as intended; and they are called <strong>subtitle</strong> for any particular member of RHINELAB, at least in terms of the directorship.</p>
+<table>
+  
+<thead>
+    
+<tr>
+      <th>Subtitle</th>
+      <th>Description</th>
+      <th>Priority</th>
+      <th>Structural Ordering</th>
+    </tr>
+
+  </thead>
+
+  
+<tbody>
+    
+<tr>
+      <td>Director of Logistics (DR)</td>
+      <td>The role belongs to the <em>directorship system</em> of RHINELAB, belongs to the title of what inside the <strong>Core Management Division</strong>, or better known as <strong>RHINELAB Central Administration</strong> (RHINE@CAD), handling different issues about logistical system and organization of the entire laboratory.</td>
+      <td><code>R1</code> to <code>R3</code>, based on necessity.</td>
+      <td>Tier II. All decisions of this class would be handled surrounding <em>quality of life</em>, moderation concern, deployment of logistics and infrastructure thereof, reorganization of resources and logistical assets, under constraints of the working apparatus and operational tooling, that is, the <em>working team</em> and research community in question. They do not have the order to tangle with <strong>operational team and assets</strong>.</td>
+    </tr>
+
+    
+<tr>
+      <td>Director of Science (DSC)</td>
+      <td>Fundamentally, this is the role belongs to either <strong>domain experts and mastermind</strong> there be (for example, in DOM@PHYS of physics domain),</td>
+      <td><code>R1</code> to <code>R4</code>, with issues and so on regarding scientific research.</td>
+      <td>Tier II, similarly so, however they are the actual <em>director on the operational team</em>. Such is then to say they can have the saying and entanglement with functional structures, however, not absolute overriding conditions. This is <strong>mandated of non-absoluteness</strong>, with only weighted voice allowed.</td>
+    </tr>
+
+    
+<tr>
+      <td>Director of Functionals (DRC - with custom append for roles)</td>
+      <td>The role belongs to the <em>Central Administration</em>, particularly reserved for directors of specialities like <em>outreach director</em>, funding and relation and so on.</td>
+      <td><code>R1</code> to <code>R3</code>, based on necessity of unique functionality.</td>
+      <td>Tier II, similar to the above. Most of the functionalities are reserved for specialities, so they have no direct route of influence outside of responsibilities upon interaction of laboratories or members.</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+<h3 id="rhinelab---tier-two-members"><a class="header" href="#rhinelab---tier-two-members">RHINELAB - Tier Two Members</a></h3>
+<p>Tier Two are considered, starting from Half-Member to below, the tier of <strong>guest</strong> (important or passing by), <em>collaborators</em>, <em>temporary members or participants</em>, and <em>advisor</em>.</p>
+<h3 id="academic-roles"><a class="header" href="#academic-roles">Academic Roles</a></h3>
+<p>Under such, we will have the following set of <em>mid-level roles and discrete responsibilities</em>, in such there exists the majority of functionalities under active presumption of RHINELAB institution. Simply speak, team leader, local group leader, and researchers are part of this. This introduces the new concept, <strong>academic priority</strong>. This is different from a priority in administrative term. This, is for <em>academic activities and coordination</em> priority upon consideration and arrival. And indeed, there exists also <em>scholastic evaluation terminology</em>, of which take into consideration their own innate abilities and given weight inside the laboratory at will.</p>
+<table>
+  
+<thead>
+    
+<tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Priority</th>
+      <th>Structural Ordering</th>
+    </tr>
+
+  </thead>
+
+  
+<tbody>
+    
+<tr>
+      <td>Group/Research Leader</td>
+      <td>The role belongs to <strong>research project</strong> or <strong>research group</strong> leading position. Typically assigned for ONIG, SNIG and UNIG groups.</td>
+      <td><code>R3</code> on wide-scale of the laboratory.</td>
+      <td>Just as stated. Tier III (<strong>Organizer</strong>) of the laboratory. Many of its people would be of this role on administrative side than the above organization thereof, as independent group leader on research.</td>
+    </tr>
+
+    
+<tr>
+      <td>Researcher</td>
+      <td>This is the <strong>baseline</strong> official member of RHINELAB. In such, they are responsible for their personal research, practical research there be, and so on of activities inside the institution.</td>
+      <td><code>R3</code> on the wide-scale of the laboratory. If sufficient, it can be up to <code>R2</code>.</td>
+      <td>Just as stated being Tier IV, fully functional <strong>baseline</strong> of the laboratory. Most researcher is classified as such inside the structure of the laboratory, though, they retain structural right and such to perform opinion evaluation and participating on all activities of the laboratory, and advising such.</td>
+    </tr>
+
+    
+<tr>
+      <td>Research Trainee</td>
+      <td>This is the <em>entry evaluation area</em> where most of the operations on training, accumulating and assessment of sufficient qualification are conducted. It is also where you will land, after applying for the laboratory and under training pipeline.</td>
+      <td><code>NA</code></td>
+      <td>Nominally Tier V, that said, this role would be where most <em>support on infrastructure</em> would be dedicated of, both in work and so on. So, somewhat closer to Tier IV, with additional credential creation and so on be possible on great scheme for Research Trainee.</td>
+    </tr>
+
+  </tbody>
+
+</table>
+
+<p>Those would be the <strong>central core</strong> of what RHINELAB will be consisted of. That is, we are to say the obvious <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathcal" style="margin-right:0.14736em;">N</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">σ</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">μ</span><span class="mclose">)</span></span></span></span> distribution fact - most of the operations and compositions of the laboratory would be of regular members, of the <strong>scholar</strong>, thus they would have to be inquired and taken care of, with grace, and with consideration.</p>
+<h3 id="assignment-per-member"><a class="header" href="#assignment-per-member">Assignment per member</a></h3>
+<p>As it stands, <em>all roles</em> are to be retained within a particular person promotion, if such can be called under circumstances. That is, if a person stays within the role of which they are assigned beforehand, except of the different place-specific roles then such would be changed accordingly.</p>
+<h3 id="scope-and-exercise-of-power"><a class="header" href="#scope-and-exercise-of-power">Scope and exercise of power</a></h3>
+<p>The scope and exercise of power relies on a system of <strong>tier checking</strong> and <strong>priority code</strong>. While it might seem redundant, it is much more feasible to define this system, instead of patching it up afterward, because of how minimal such system in creation can be.</p>
+<h2 id="laboratory-compositions"><a class="header" href="#laboratory-compositions">Laboratory compositions</a></h2>
+<p>At the current state, the laboratory structure can be said to resemble closed-structure, encapsulation model of the national science entities, and some of the component and organization are taken from the coursebook of the Russian, or the Soviet scientific community at the national level. Given such, it is rather interesting to present the content and thereof, of the accordingly both complex, yet also <em>simple</em>, structure of the inquiry itself.</p>
+<p>Based on the structural evolution taken thereof, there is the need to provide laboratory structure, and how everything is formed of the current structure, for clarity and navigation. This document and page is dedicated to explain such. The document is currently managed and maintained in <strong>version Phase I</strong>, i.e. continual update in the realm and domain of Phase I of the coverage of the laboratory. Further specification and information would be added in later version, if such is permitted, under the current form or not given <em>no information was to be deleted</em>, such is to only added and requisitioned elsewhere, as noted.</p>
+<blockquote class="blockquote-tag blockquote-tag-tip">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 0 1-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456 0 0 0-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751 0 0 1-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75ZM5.75 12h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM6 15.25a.75.75 0 0 1 .75-.75h2.5a.75.75 0 0 1 0 1.5h-2.5a.75.75 0 0 1-.75-.75Z"></path></svg>Tip</p>
+<p>As of current, laboratory organization can <em>only be changed</em> by Principal Director.</p>
+</blockquote>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Please also refer to <code>DOC-OR(-PROP)-08</code> for this specific purpose, and origin of the design template. For many sections of which, documentations would be entirely and is not found in any other record. For the ‘record’, that is, this site is noted <code>MNU-OR-02</code>.</p>
+</blockquote>
+<p>The laboratory model is inherently <em>top-down</em> under influence and ownership. That is, it goes as the following main core central line.</p>
+<p align="center">
+  <img src="part1_laboratory_function/asset/RHINELAB-CORE.jpg" alt="The Laboratory operational schematic, based on functions and structural composition of higher-lab to lower-lab &#39;where you belong to&#39; design.">
+</p>
+
+<h3 id="a-laboratory-leader-principal-administrator-rhinelabpdi"><a class="header" href="#a-laboratory-leader-principal-administrator-rhinelabpdi">A. Laboratory Leader, Principal Administrator (<code>RHINELAB@PD/I</code>)</a></h3>
+<p>The role here is similar to what you would call and usually say as <strong>CEO</strong>, though we should not call it as such. By ownership, the <strong>Laboratory Founder</strong> holds all functional, institutional and correlated, shared <em>intellectual properties</em> or private and single-owned intellectual properties or creations. Even though RHINELAB operates on mainly open-source dissection, such inquires non of the require for the work to be non-open-source aside from the mandate that works should be of the ratio <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">80/15/5</span></span></span></span> partition of open-source, semi-open-source and closed-source works and intellectual amounts. The principal administrator here is, of the present tense and all, <em>Bui Gia Khanh</em> as also its founder. It is then wise to state, and often better of admission, to say that the Principal Administrator and so far, as its founder, such would not be a role of a manager, but also an active researcher as he is, and is, of a person with his philosophies and so on. He is as much scholar as he is a manager, and should he be, he must then be capable, often time, to realize the balance of which is the human and the logic side of talk. Under such, if the founder and so on of principal administrator is unable to take ahold of such, he would be left with options of suspension of additions on moderations, provisions thereof, and only left of maintenance of RHINELAB, i.e. cold state, meanwhile <code>RHINE@CAD</code> would also be suspended of such, however with moderations, provisions, and maintenance level of which does not penetrate the major institutional state suspended of the time, minimally for existence. Until such is resolve, it would be strictly <em>institutional</em> and should not penetrate into either the <strong>philosophical pillar</strong> specified universally, or should it be so, of the operational academic activities unless inquired or involved.</p>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>If the institution and its overreaching system cannot exist under its own philosophy, and much of its survival condition, then, continuity must stop. RHINELAB would cease, by then, of its existence and is replaced of its record. To exist without its own philosophy is not RHINELAB, but another subject in entirety, and should be marked of such per its respect of history and observers therebe.“</p>
+</blockquote>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<p>Basically, it says if you work with us, you better be damn that you involve us in your credibility of what we do and what we provide, not just financial resources or so but logistics, hosting, and providing your academic working space. We also have saying in your own matter at hand of what you produce inside the laboratory, <em>will be of the laboratory</em> but with <em>you on the record as to influence its usage as the creator and primary researcher or so, if that even applies</em> in regard to the internal lab, and the external lab usage under constraints settled. Like, licenses and open-source mandate.</p>
+</blockquote>
+<p>If it is to say about the above implication thereof, extended also to <code>RHINE@CAD</code>, then it is simple. We <em>fear</em> loss of open-control, but more so the fear of <strong>historical erasure</strong>. In a sense, you cannot remove those of which to give you spoon that you feed your meal in. Your contributions, creations, and thereof, either of the lone genius taken in, or a rogue one in rebellion, are not, in any sense, capable of inventing anything alone. The myth of the lone genius is not <strong>real</strong> nor it is <strong>practical</strong>, for it, to rely on its own sustainability, be it parents, be it teachers, of the benevolent people of which is very rare and even in such a case, such would be of rhetorically despicable to remove such teacher from ever being credited for even helping the person following him. If such person is to be alone, truly alone, then he must fend for himself, eat for himself, make everything of himself, of theoretical visions, of which to enquire no intellectual palace to stand, the room to think, bored of hunger, bored of bureaucrats, constrained by resources, lack of times. All of such, are not alone, and should, under least condition, be recognised of such. In position of the adversarial from such, is perhaps quite so, the act of naivety, irresponsibility, treacherous removal of identity and existence under either normal or philosophical mention, and simply against everything scientific discourse and existence of even the action of science is for, if we take it more than just mainstream to extend very close to the term <em>philosophy</em> there is.</p>
+<h2 id="b-central-administration-rhinecad"><a class="header" href="#b-central-administration-rhinecad">B. Central Administration (RHINE@CAD)</a></h2>
+<p>Often abbreviated as <em>RHINE@CAD</em> (or so just for everything of <em>RHINELAB@</em> in syntax), the <em>central administration</em> is the <em>core structural</em> system that is of use for RHINELAB and its operational strength.</p>
+<p>The function of CAD is varied, but often times of such, it maintains the larger:</p>
+<ol>
+<li>Functional and autonomous, generalized and compartmentalized <em>logistical system</em> and <em>institutional generation system</em> used for RHINELAB’s intellectual activities.</li>
+<li>Principles and theoreticals on matters concerning RHINELAB’s operations, laboratory operations, and the <em>scientific theories</em> in general.</li>
+<li>Institutional research, i.e. the research on <em>institution, systems of intellectual activities and humanitarian concentration</em> <sup class="footnote-reference" id="fr-1-1-1"><a href="#footnote-1-1">1</a></sup> <sup class="footnote-reference" id="fr-2-1"><a href="#footnote-2">2</a></sup>.</li>
+<li>Maintenances and bookkeeping, operational reduction, in general institutional building and recheck.</li>
+<li>Maintain research on <em>fundamental science</em> and <em>network system control</em>.</li>
+</ol>
+<p>Those are some of the core operational 1s and tasks that CAD should take into account alongside their own philosophy. Role assignments follows, with its core the <em>Administrator</em> of CAD in its core, which can be of at most four seats. One seat is permanently occupied by the Principal Administrator <sup class="footnote-reference" id="fr-3-1"><a href="#footnote-3">3</a></sup>. Planning and general macro-structures are <strong>not permitted to be changed</strong> by any members of <code>CAD</code>, aside from major consensus and Principal Administrator’s agreement. This is not a democracy, you know.</p>
+<p>Under the composition of <code>RHINE@CAD</code>, there then exists three, with the included third in development at the time of writing this (of a plan to finish formation theoretical by 2027), listed in [[UNIG - Named Laboratory]], of classification <strong>UNIG</strong>.</p>
+<h3 id="unig-01-mtail-modelling-theory-artificial-intelligence-and-learning-theoretic-laboratory"><a class="header" href="#unig-01-mtail-modelling-theory-artificial-intelligence-and-learning-theoretic-laboratory">UNIG-01, MTAIL (Modelling Theory, Artificial Intelligence and Learning-theoretic Laboratory)</a></h3>
+<p>The unit <code>RHINE@MTAIL</code>, focused on <em>modelling theory</em>, general <em>artificial intelligence</em>r research of both theoretical and philosophy, and learning-theoretic development such as <em>symbolic learning theory</em> and <em>statistical learning theory</em>, or <em>alternative learning theory</em> at such. Their work focuses on, for now, hinges on:</p>
+<ol>
+<li>Theory of modelling, reformation and reclassification of models and their <strong>importance order</strong>.</li>
+<li>Artificial intelligence and its theoretical treatments, applied AI system analysis. Specifically <em>negative research</em> against AI developments.</li>
+<li><em>Learning theory</em>, including <strong>statistical learning theory</strong> and <em>symbolic learning theory</em> (1950s-1990s) as its central study.</li>
+</ol>
+<p>Majority of all works from <code>RHINE@MTAIL</code> is impervious of the <strong>core work and research</strong> of the lab. Thus, it takes absolute precedence over all else when it comes to academic research and core functional.</p>
+<h3 id="unig-02-logit-logistics-operational-and-general-infrastructure-template-laboratory"><a class="header" href="#unig-02-logit-logistics-operational-and-general-infrastructure-template-laboratory">UNIG-02, LOGIT (Logistics, Operational and General Infrastructure, Template Laboratory)</a></h3>
+<p>Logistic branch of the <code>UNIG</code> system. They handle the <em>theory of institutional logistics</em> and the <em>theory of human and scholastic logistics</em>, and maintenance of RHINELAB’s logistical system. Their capacities define <em>how much can they extend</em> of the laboratory, at any given time.</p>
+<h3 id="unig-03-gtpr-general-theoretical-and-principal-resolution-laboratory"><a class="header" href="#unig-03-gtpr-general-theoretical-and-principal-resolution-laboratory">UNIG-03, GTPR (General Theoretical and Principal Resolution Laboratory)</a></h3>
+<p>They are the <em>general theoretical research branch</em>. This ranges from <em>institutional theory</em> research, <em>functional laboratory research</em>, template of the institutional and various form of operational core, code of conduct, communication protocol in academic research, philosophical grounding and debate on institutional workings, and more of non-institutional works, for example, <em>philosophy of science</em> and <em>philosophy of scientific research</em>, and so on. This group is currently <em>non-operational</em>.</p>
+<h2 id="c-concentrated-domains-and-departments-rhinecdd"><a class="header" href="#c-concentrated-domains-and-departments-rhinecdd">C. Concentrated Domains and Departments (RHINE@CD/D)</a></h2>
+<p>This organization is one-step lower than the previous one. The philosophy here is rather, no pun intended, <em>concentrated</em>, and much of it relies on a new concept that we called as the <em>concentration of knowledge</em> fields.</p>
+<hr>
+<ol class="footnote-definition">
+<li id="footnote-1-1">
+<p>Here, humanitarian concentration strictly means, not extended to otherwise, <em>human-centric configuration and assessment</em> of a particular activity hub in which human-to-human interaction is classified as <em>high-intensity</em>, and as also there exists both polar of the <em>separability condition</em>, and <em>humanizing condition</em>. <a href="#fr-1-1-1">↩</a></p>
+</li>
+<li id="footnote-2">
+<p>As above stated of the first footnote, clarification of such should be delivered in the same time. By <em>high-intensity classification</em>, we believe that intellectual community, research laboratory, and many of the institutional system of <strong>scholastic nature</strong>, resides intrinsic non-collapsible and often time natural <em>identity interaction</em>, between identities of humans, different people and their own archetype, so much so also the oppositions thereof. In doing so, institutional system faces two calamities thereof - either would they switch to <em>separability conjecturation</em> where one would conjecture and actionalize on <em>separation of identity from functions</em>, to preserve their oppositions and of which identity, intellectual mass in which they define as of their worldview, material view, and existential view. On the other side, such would be enquired of the opposition to those being <em>humanization conjecturation</em>, where one goes for <em>humanizing the system</em>, enforcing identity extension, acknowledgement of identities baseline, basis, and what to form of the institution to replicate of which fundamentally human-qualities like empathy, facilitation on analytical viewport of emotional response, irreducible stance on the analytic of human as quantification or categorization (such as, for example, psychological diseases as a total proxy for erratic behaviours), and communal preference. Such would be the gauging thereof that is required of which CAD would have to put theoretical, and to put practical into effect. <a href="#fr-2-1">↩</a></p>
+</li>
+<li id="footnote-3">
+<p>The design here is particularly pointed to a system of <em>delegated control</em>. By default, while exercising power of the Principal Administrator waives under structural condition of any pushback from the below system, such would be not preferable for natively solvable solutions. Under administrative works and the meta-linguistic thereof for the laboratory system, should it be inquired, the Principal Administrator, and thus subsequently, administrative personnel, shall exercise <em>local enforcement condition</em>, if available (which should be made available of all time) unless required under assessment otherwise, to not exercise abundance of administrative power where such is not necessitated of the preliminary conditions. <a href="#fr-3-1">↩</a></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="member-personnel-and-logistics"><a class="header" href="#member-personnel-and-logistics">Member, personnel and logistics</a></h1>
+<p>As far as it is concerned, we intend to keep the core of operation for the laboratory to be low. That is, deliberately so, we are to reduce the operational cost in general to the baseline minimum possible so to prevent ourselves from instead of doing academic works, into managing administrative bloat, unnecessary bureaucratic performance that does not serve to clarify or of any given strict design.</p>
+<p>Thereby, the current decision is thus configured for <em>limited core functional</em>, that is, the core full member and official members of RHINELAB, would be, and happens of, a small and dedicated slot only, of which is approved by the Laboratory Leader. Given such, the current size is determined mostly of <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span> people, and they would be divided into tiers and slot of what is available and so on. Insurance for this is mostly there for minimal core of actionable population, for example, the director of logistics and so on (which is responsibility role).</p>
+<blockquote class="blockquote-tag blockquote-tag-important">
+<p class="blockquote-tag-title"><svg viewbox="0 0 16 16" width="18" height="18"><path d="M0 1.75C0 .784.784 0 1.75 0h12.5C15.216 0 16 .784 16 1.75v9.5A1.75 1.75 0 0 1 14.25 13H8.06l-2.573 2.573A1.458 1.458 0 0 1 3 14.543V13H1.75A1.75 1.75 0 0 1 0 11.25Zm1.75-.25a.25.25 0 0 0-.25.25v9.5c0 .138.112.25.25.25h2a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h6.5a.25.25 0 0 0 .25-.25v-9.5a.25.25 0 0 0-.25-.25Zm7 2.25v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path></svg>Important</p>
+<h2 id="personnel-cap"><a class="header" href="#personnel-cap">Personnel cap</a></h2>
+<p>Under current scheme of logistical support and management, we cap the total amount of official members to <strong>25 members</strong> only. We apologize for this small cohort choice.</p>
+</blockquote>
+<hr>
+<h2 id="active-members"><a class="header" href="#active-members">Active members</a></h2>
+<p>The following lists the active members at present of working in RHINELAB. Most of them are rather very active, and participating in major works from the laboratory’s perspective.</p>
+<h3 id="r0"><a class="header" href="#r0"><code>R0</code></a></h3>
+<h4 id="bui-gia-khanh"><a class="header" href="#bui-gia-khanh">Bui Gia Khanh</a></h4>
+<p>Bui Gia Khanh (or often known as 藤宮天音, Fujimiya Amane), is the founder, <strong>principal director/researcher</strong> that created and founded RHINELAB. He is in responsible of all activities and all directorship positions, providing logistical support and formation, organization and intellectual, scholar production of works and researches. His specialties are in physics, artificial intelligence, theoretical computer science, theoretical modelling theory, and foundational mathematics.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-609e4cb8.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
