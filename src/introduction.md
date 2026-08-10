@@ -28,6 +28,8 @@ The following are what we are intending this site to hold, in the future or so r
 12. Collaborations and so on. 
 13. Documentation of **core functionalities and technologies** of the lab, like `git` or `quarto` or even something as simple as `markdown`. Including how to work with `latex` or `typst` and other documenting system. 
 
+Most of the contents here are listed as **development phase** contingent. So, there will be more contents to come alongside. We apologize for the delay of any piece of substantial materials. 
+
 ## The long introduction to RHINELAB
 
 In case you haven't read from the [front-facing website or so](https://rhinelab.netlify.app/), RHINELAB is a *theoretical research laboratory* with the side prospect being a semi-experimental laboratory, under budget, and under constraint if there are any. In doing so, we are committed to the act that most of the time, would be abhorrently dismissed by the general academic society or so, during which times we are doing STEM research. Picking a philosophical commitment, but **stand** in between. That is, we want to perfect the art of **tension**[^1] to our best of ability. Our core belief stems from the reality of such, that there exists no fundamentally right model, and there exists no fundamentally wrong model in hindsight. Only there exists miscategorized, misused, misconfigured, and overall just the plain wrong usage there is. In doing so, that is the foundation and one of the core belief, that shaped RHINELAB to what it is, and the philosophies it carries with downstream effect. 

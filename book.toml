@@ -2,7 +2,7 @@
 authors = ["Amane Fujimiya"]
 language = "en"
 src = "src"
-title = "RHINELAB Maintenance Wiki"
+title = "RHINELAB Maintenance Wiki, v0.1"
 
 # ==============================================================================
 # NATIVE 0.5.x HTML RENDERER FEATURES (Replaces Admonish & TOC Plugins)

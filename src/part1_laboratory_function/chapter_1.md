@@ -71,18 +71,6 @@ Within such, we would like to separate the hierarchy into two parts - the *direc
       <td><code>R1</code> to <code>R3</code>.</td>
       <td>Inherently, all Tier II. All decision of this tier would be specified down below.</td>
     </tr>
-    <tr>
-      <td><strong>Full Members</strong> (FM)</td>
-      <td>This is the baseline, full and important member of the laboratory. Every person of the laboratory will have, upon the 25-people pool assignment, will be assigned this role, <em>permanently</em>.</td>
-      <td><code>R2</code> to <code>R3</code>.</td>
-      <td>Fixed on Tier III for operations.</td>
-    </tr>
-    <tr>
-      <td><strong>Half Members</strong> (HM)</td>
-      <td>Half member is the analogue for <em>trainee</em> or <em>trial participant</em> of the lab's inner circle of sort. There will be inherent <strong>limitation</strong> on what half members can access, based on virtue of trust and accountability. Though it is not as if we are essentially locking them out, we are to build trust with them, and gain their respect (speaking from full member's perspective and the directorship), then we would be entitled to give them access and elevation to full member. It is also expected for the half-member to do the same, if they feel their commitment is <em>worthwhile of consideration</em>. Given such, we are to limit this as the core central separation from full member, with limited power, limited accessibility, and limited leverage.</td>
-      <td><code>R4</code>.</td>
-      <td>Structural ordering dictates Half Member to be of the lower Tier IV.</td>
-    </tr>
   </tbody>
 </table>
 
@@ -127,7 +115,38 @@ With that in hand, we return our attention to the next identification. Director 
 
 ### RHINELAB - Tier Two Members
 
-Tier Two are considered, starting from Half-Member to below, the tier of **guest** (important or passing by), *collaborators*, *temporary members or participants*, and *advisor*. Base on such characterization and description, we can then categorize them into different roles and handling of themselves. 
+Tier Two are considered, starting from Half-Member to below, the tier of **guest** (important or passing by), *collaborators*, *temporary members or participants*, and *advisor*. Base on such characterization and description, we can then categorize them into different roles and handling of themselves. On the baseline system, we have **full member** and **half member**, as followed. 
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Priority</th>
+      <th>Structural Ordering</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Full Members</strong> (FM)</td>
+      <td>This is the baseline, full and important member of the laboratory. Every person of the laboratory will have, upon the 25-people pool assignment, will be assigned this role, <em>permanently</em>.</td>
+      <td><code>R2</code> to <code>R3</code>.</td>
+      <td>Fixed on Tier III for operations.</td>
+    </tr>
+    <tr>
+      <td><strong>Half Members</strong> (HM)</td>
+      <td>Half member is the <em>almost analogue</em> for <em>trainee</em> or <em>trial participant</em> of the lab's inner circle of sort. There will be inherent <strong>limitation</strong> on what half members can access, based on virtue of trust and accountability. Though it is not as if we are essentially locking them out, we are to build trust with them, and gain their respect (speaking from full member's perspective and the directorship), then we would be entitled to give them access and elevation to full member. It is also expected for the half-member to do the same, if they feel their commitment is <em>worthwhile of consideration</em>.</td>
+      <td><code>R4</code>.</td>
+      <td>Structural ordering dictates Half Member to be of the lower Tier IV.</td>
+    </tr>
+    <tr>
+      <td><strong>Trainee</strong> (TR)</td>
+      <td>Trainees are in identical level of Half Member, but on the majority of their tasks are to be <strong>probing research</strong>, <strong>trial research</strong> and <strong>learning-focused track</strong> rather than research-focused sections. The same limitation applies, as for similar to Half Members, reflected on infrastructures of RHINELAB.</td>
+      <td><code>R4</code>.</td>
+      <td>Structural ordering dictates Trainee to be of the lower Tier IV.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Academic Roles
 
@@ -169,6 +188,8 @@ Those would be the **central core** of what RHINELAB will be consisted of. That 
 ### Assignment per member
 
 As it stands, *all roles* are to be retained within a particular person promotion, if such can be called under circumstances. That is, if a person stays within the role of which they are assigned beforehand, except of the different place-specific roles then such would be changed accordingly. 
+
+The reason for this system lies in the ability, or at least the deliberation of **academic linage**. A person should retain their *nominal title*, i.e. the title with (P) status. 
 
 ### Scope and exercise of power
 
