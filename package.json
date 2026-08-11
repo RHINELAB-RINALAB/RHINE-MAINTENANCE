@@ -1,0 +1,13 @@
+{
+  "name": "rhine-maintenance",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "wrangler": "^3.100.0"
+  },
+  "allowScripts": {
+    "workerd@1.20250718.0": true,
+    "esbuild@0.17.19": true,
+    "sharp@0.33.5": true
+  }
+}
