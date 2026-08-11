@@ -1,4 +1,4 @@
-# Project and Research Agenda
+# RHINELAB, Project and Research Agenda
 
 RHINELAB is conservative in its ruling academic premise and commitment. As such, we are to believe in the state, as well as the dedicated timeframe of operation and scholar activities, as **foundation-based incentives**, that is, if you want to have an isomorphism to somewhere else, would be equal to **deep tech** corporations and startup. Furthermore, the nature of RHINELAB is a *virtual-first laboratory*, meaning every hardware or physical ownership at the moment is a plus from the owner and founder's perspective of usage, not much so as important to be primary, so do to preserve the picture or the commitment to be a global laboratory [^1]
 
