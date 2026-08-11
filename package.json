@@ -6,8 +6,8 @@
     "wrangler": "^4.0.0"
   },
   "allowScripts": {
-    "workerd@1.20250718.0": true,
-    "esbuild@0.17.19": true,
-    "sharp@0.33.5": true
+    "sharp@0.33.5": true,
+    "esbuild@0.28.1": true,
+    "workerd@1.20260804.1": true
   }
 }
