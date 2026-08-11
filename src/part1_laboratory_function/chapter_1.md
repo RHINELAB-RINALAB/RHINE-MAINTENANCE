@@ -12,7 +12,7 @@ Scheduling on echelon formation of members for RHINELAB is and would be of the l
 > [!TIP]
 > We use the same word 'Tier' for also the **scope and exercise of power** constraints. Note that those are marked with the statutory tier in Roman numbering, i.e. Tier I, Tier IV and so on. 
 
-Within this system, we expect the following as the minimal digression one can take a glance into, to show and analyze who and what a person inside RHINELAB this particular specimen can be. For example, 
+Within this system, we expect the following as the minimal digression one can take a glance into, to show and analyze who and what a person inside RHINELAB this particular specimen can be. For example, we can take a look at the description of the Principal Director: 
 
 <table>
   <thead>
