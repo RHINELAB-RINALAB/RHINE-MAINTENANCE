@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "wrangler": "^3.100.0"
+    "wrangler": "^4.0.0"
   },
   "allowScripts": {
     "workerd@1.20250718.0": true,

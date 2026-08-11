@@ -1,7 +1,9 @@
 # Chapter 1 - Structure and composition of RHINELAB
 
-We have quite plentiful of people in the laboratory, hence there exists the need to provide a ledger of everyone, and any particular alumni, so to speak, past researcher, and collaborators of the laboratory and institution thereof, both present and future. 
+We have quite plentiful of people in the laboratory, hence there exists the need to provide a ledger of everyone, and any particular alumni, so to speak, past researcher, and collaborators of the laboratory and institution thereof, both present and future. The structure here, while being updated from time-to-time, will serve as the basis of operation. 
 
+> [!NOTE]
+> As we will note, the laboratory is not a **democratic laboratory** in any sense. Academic research of institution or lab unit is rarely efficient if you go for petty democracy. Also, ownerships and permissions are acknowledged to be of the intellectual quantities, but most of it is of the founder. So while your name is there and nobody will claim it, for example, as also for all your contribution and right of debate, what you did in RHINELAB, belongs to RHINELAB. We provide the playground, you provide the work within your **name** and **none shall trespass it**, but we reserve the **right** to have equal control ownership. If you don't want it, please refer to other locations where democratic bureaucracy keeps targeting you. Otherwise, welcome. 
 
 ## A. Planning of operational echelon
 
